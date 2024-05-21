@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Bebas';
+  src: url('@/fonts/beantown.regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('@/fonts/Outfit-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Dovens';
+  src: url('@/fonts/dovens-personal-use/DOVENSPersonalUse-Bold.otf') format('opentype');
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-bebas {
+  font-family: 'Bebas', sans-serif;
+}
+
+.font-dovens {
+  font-family: 'Dovens', sans-serif;
+}
