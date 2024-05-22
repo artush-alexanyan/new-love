@@ -10,7 +10,11 @@
 
 @font-face {
   font-family: 'Dovens';
-  src: url('@/fonts/dovens-personal-use/DOVENSPersonalUse-Bold.otf') format('opentype');
+  src: url('@/fonts/dovener-regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Sharung';
+  src: url('@/fonts/sharung.otf') format('opentype');
 }
 
 body {

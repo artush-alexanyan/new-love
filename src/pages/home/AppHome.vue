@@ -1,9 +1,10 @@
 <template>
   <div class="home">
-    <AppHero />
+    <!-- <AppHero /> -->
     <AppCharacters />
     <AppComunity />
     <AppWaitList />
+    <AppFooter />
   </div>
 </template>
 
@@ -12,4 +13,5 @@ import AppHero from './AppHero.vue'
 import AppCharacters from './AppCharacters.vue'
 import AppComunity from './AppComunity.vue'
 import AppWaitList from './AppWaitList.vue'
+import AppFooter from './AppFooter.vue'
 </script>

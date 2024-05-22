@@ -12,7 +12,9 @@
           <div>
             <div class="text_wrapper w-5/6 text-white">
               <p class="text-sm text-red-600">1/3</p>
-              <h1 class="text-7xl uppercase font-bebas my-2">corporate intrigue</h1>
+              <h1 class="xl:text-7xl md:text-5xl text-2xl uppercase font-bebas my-2">
+                corporate intrigue
+              </h1>
               <p class="text-sm text-[#ABABAB]">
                 Est amet faucibus elit libero eget quis. Euismod vulputate tortor dignissim massa
                 vestibulum diam rhoncus euismod facilisis. Morbi purus et odio a. Quisque viverra
