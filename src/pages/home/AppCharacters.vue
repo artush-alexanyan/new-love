@@ -30,12 +30,12 @@
         </div>
         <!-- HERO CONTENT -->
         <div class="absolute left-0 w-full top-0 md:px-0 px-5">
-          <div class="grid md:grid-cols-2 place items-center justify-items-center h-screen">
+          <div class="grid md:grid-cols-2 place-items-center place-content-start overflow-hidden">
             <div class="hero-text md:ml-80 text-white md:order-first order-last md:block hidden">
-              <h1 class="xl:text-7xl md:text-5xl text-2xl uppercase text-white font-bebas">
+              <h1 class="xl:text-[88px] md:text-5xl text-2xl uppercase text-white font-bebas">
                 Love <span class="text-red-500">&</span>
               </h1>
-              <h1 class="xl:text-7xl md:text-5xl text-2xl uppercase text-white font-bebas">
+              <h1 class="xl:text-[88px] md:text-5xl text-2xl uppercase text-white font-bebas">
                 ambitions
               </h1>
 
@@ -48,22 +48,22 @@
                     high stakes of Formula 1 racing.
                   </p>
                 </div>
-                <h1 class="xl:text-5xl md:text-3xl uppercase font-bebas ml-4 -mr-8">AT</h1>
+                <h1 class="xl:text-[52px] md:text-3xl uppercase font-bebas ml-4 -mr-8">AT</h1>
               </div>
 
               <div class="text-right">
-                <h1 class="xl:text-5xl md:text-3xl font-bebas">Breakneck</h1>
+                <h1 class="xl:text-[52px] md:text-3xl font-bebas">Breakneck</h1>
                 <div class="flex items-center justify-end w-full space-x-5 my-2.5">
                   <button class="py-3 px-6 rounded-[30px] text-white text-base bg-[#D3041C]">
                     Join our Comunity
                   </button>
-                  <h1 class="xl:text-5xl md:text-3xl font-bebas">Speed</h1>
+                  <h1 class="xl:text-[52px] md:text-3xl font-bebas">Speed</h1>
                 </div>
               </div>
             </div>
 
-            <div class="image_wrapper w-full">
-              <img src="@/assets/images/hero/hero.png" class="object-contain md:ml-24 ml-16" />
+            <div class="image_wrapper w-full md:ml-28 ml-16 mt-5">
+              <img src="@/assets/images/hero/hero.png" class="object-contain" />
             </div>
             <div class="mobile_text-wrapper -mt-20 text-center sm:hidden">
               <h1 class="text-2xl uppercase text-white font-bebas">
@@ -89,43 +89,50 @@
         <div class="absolute left-0 md:top-[40%] top-1/2">
           <img src="@/assets/images/hero/sparks.png" alt="" />
         </div>
-        <!-- <BaseSocial /> -->
+        <BaseSocial />
       </div>
     </div>
     <div
       class="relative md:pt-60 w-full bg-[url('@/assets/images/section-2/2-3-back.png')] bg-cover bg-center bg-no-repeat"
     >
       <div class="relative h-screen">
+        <div
+          class="chapter-section absolute z-10 h-1/2 w-full left-0 top-1/2 transform -translate-y-1/2"
+        ></div>
         <div class="absolute top-0 left-0 w-full">
-          <div id="chapter-section border-4" v-for="(chapter, index) in chapters" :key="chapter.id">
-            <Transition name="custom-classes">
-              <div
-                v-if="currentChapterIndex === index"
-                class="grid md:grid-cols-2 place-items-center justify-items-center md:p-0 p-5"
+          <div class="relative">
+            <div v-for="(chapter, index) in chapters" :key="chapter.id">
+              <Transition
+                enter-active-class="animate__animated  animate__slideInLeft animate__fast"
               >
-                <div class="img_wrapper">
-                  <img :src="currentChapter.image" alt="" />
-                </div>
-                <div>
-                  <div class="text_wrapper md:text-left text-center md:w-5/6 w-full text-white">
-                    <p class="md:text-sm text-xs text-red-600">
-                      {{ currentChapterIndex + 1 }} / {{ chapters.length }}
-                    </p>
-                    <h1
-                      class="lg:text-[64px] md:text-4xl text-2xl text-white uppercase lg:leading-none my-2"
-                    >
-                      {{ currentChapter.title }}
-                    </h1>
-                    <p class="md:text-sm text-xs text-[#ABABAB]">
-                      Est amet faucibus elit libero eget quis. Euismod vulputate tortor dignissim
-                      massa vestibulum diam rhoncus euismod facilisis. Morbi purus et odio a.
-                      Quisque viverra pretium mauris vulputate sed pretium adipiscing pharetra.
-                      Pellentesque ullamcorper posuere fermentum mauris.
-                    </p>
+                <div
+                  v-if="currentChapterIndex === index"
+                  class="grid md:grid-cols-2 place-items-center justify-items-center md:p-0 p-5"
+                >
+                  <div class="img_wrapper">
+                    <img :src="currentChapter.image" alt="" />
+                  </div>
+                  <div>
+                    <div class="text_wrapper md:text-left text-center md:w-5/6 w-full text-white">
+                      <p class="md:text-sm text-xs text-red-600">
+                        {{ currentChapterIndex + 1 }} / {{ chapters.length }}
+                      </p>
+                      <h1
+                        class="lg:text-[64px] md:text-4xl text-2xl text-white uppercase lg:leading-none my-2"
+                      >
+                        {{ currentChapter.title }}
+                      </h1>
+                      <p class="md:text-sm text-xs text-[#ABABAB]">
+                        Est amet faucibus elit libero eget quis. Euismod vulputate tortor dignissim
+                        massa vestibulum diam rhoncus euismod facilisis. Morbi purus et odio a.
+                        Quisque viverra pretium mauris vulputate sed pretium adipiscing pharetra.
+                        Pellentesque ullamcorper posuere fermentum mauris.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Transition>
+              </Transition>
+            </div>
           </div>
         </div>
       </div>
@@ -152,7 +159,7 @@
               </p>
             </div>
             <div class="md:text-right text-center">
-              <h1 class="xl:text-7xl md:text-5xl text-2xl text-white uppercase font-bebas">
+              <h1 class="xl:text-[88px] md:text-5xl text-2xl text-white uppercase font-bebas">
                 <span class="text-red-600"> {{ currentCharacter.name }} </span>
                 {{ currentCharacter.last_name }}
               </h1>
@@ -199,9 +206,10 @@
 
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
+import BaseSocial from '@/base/BaseSocial.vue'
 
 const currentIndex = ref(0)
-const currentChapterIndex = ref(2)
+const currentChapterIndex = ref(0)
 const characters = ref([
   {
     id: 0,
@@ -292,9 +300,23 @@ const currentChapter = computed(() => {
 const changeCharacter = (index) => {
   currentIndex.value = index
 }
+const isTransitioning = ref(false)
+
+const isInChapterSection = () => {
+  const chapterSections = document.getElementsByClassName('chapter-section')
+  const mouseY = event.clientY || event.pageY
+
+  for (let i = 0; i < chapterSections.length; i++) {
+    const rect = chapterSections[i].getBoundingClientRect()
+    if (mouseY >= rect.top && mouseY <= rect.bottom) {
+      return true // Return true if mouse is over this section
+    }
+  }
+  return false // Return false if mouse is not over any section
+}
+
 const handleScroll = (event) => {
   const deltaY = event.deltaY
-  // console.log('deltaY', deltaY)
 
   if (isInChapterSection()) {
     if (deltaY > 0 && currentChapterIndex.value < chapters.value.length - 1) {
@@ -310,26 +332,25 @@ const handleScroll = (event) => {
 }
 
 const handleScrollTop = () => {
-  setTimeout(() => {
-    if (currentChapterIndex.value > 0) {
+  if (!isTransitioning.value && currentChapterIndex.value > 0) {
+    isTransitioning.value = true
+    setTimeout(() => {
       currentChapterIndex.value--
-    }
-  }, 800)
+      isTransitioning.value = false
+    }, 800) // 800ms should match your transition duration
+  }
 }
 
 const handleScrollBottom = () => {
-  setTimeout(() => {
-    if (currentChapterIndex.value < chapters.value.length - 1) {
+  if (!isTransitioning.value && currentChapterIndex.value < chapters.value.length - 1) {
+    isTransitioning.value = true
+    setTimeout(() => {
       currentChapterIndex.value++
-    }
-  }, 800)
+      isTransitioning.value = false
+    }, 800) // 800ms should match your transition duration
+  }
 }
-const isInChapterSection = () => {
-  const chapterSection = document.getElementsByClassName('chapter-section')
-  const rect = chapterSection.getBoundingClientRect()
-  const viewHeight = window.innerHeight || document.documentElement.clientHeight
-  return !(rect.bottom < 0 || rect.top - viewHeight >= 0)
-}
+
 onMounted(() => {
   window.addEventListener('wheel', handleScroll, { passive: false })
 })
