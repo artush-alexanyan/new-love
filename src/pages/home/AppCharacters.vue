@@ -146,13 +146,7 @@
           <div class="grid md:grid-cols-2">
             <div class=""></div>
             <div class="relative">
-              <img
-                :class="{
-                  'animate__animated  animate__fadeOut animate__faster': characterTransition
-                }"
-                :src="currentCharacter.image"
-                alt="character-image"
-              />
+              <img :src="currentCharacter.image" alt="character-image" />
               <div
                 class="absolute z-20 top-[60%] left-[65%] transform -translate-x-1/2 -translate-y-1/2"
               >
@@ -228,7 +222,6 @@ import BaseSocial from '@/base/BaseSocial.vue'
 const currentIndex = ref(0)
 const currentChapterIndex = ref(0)
 const isTransitioning = ref(false)
-const characterTransition = ref(false)
 const characters = ref([
   {
     id: 0,
@@ -317,18 +310,10 @@ const currentChapter = computed(() => {
   return mappedChapters.value[currentChapterIndex.value]
 })
 const changeCharacter = (index) => {
-  characterTransition.value = true
-  setTimeout(() => {
-    currentIndex.value = index
-    characterTransition.value = false
-  }, 500)
+  currentIndex.value = index
 }
 const changeCharacterWithLoop = () => {
-  characterTransition.value = true
-  setTimeout(() => {
-    currentIndex.value = (currentIndex.value + 1) % characters.value.length
-    characterTransition.value = false
-  }, 800)
+  currentIndex.value = (currentIndex.value + 1) % characters.value.length
 }
 
 const isInChapterSection = () => {
