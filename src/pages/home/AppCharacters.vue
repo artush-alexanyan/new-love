@@ -31,8 +31,12 @@
         <!-- HERO CONTENT -->
         <div class="absolute left-0 w-full top-0 md:px-0 px-5">
           <div class="grid md:grid-cols-2 place-items-center place-content-start overflow-hidden">
-            <div class="hero-text md:ml-80 text-white md:order-first order-last md:block hidden">
-              <h1 class="xl:text-[88px] md:text-5xl text-2xl uppercase text-white font-bebas">
+            <div
+              class="hero-text md:ml-80 -mt-20 text-white md:order-first order-last md:block hidden"
+            >
+              <h1
+                class="xl:text-[88px] md:text-5xl text-2xl uppercase text-white text-center font-bebas"
+              >
                 Love <span class="text-red-500">&</span>
               </h1>
               <h1 class="xl:text-[88px] md:text-5xl text-2xl uppercase text-white font-bebas">
@@ -52,7 +56,7 @@
               </div>
 
               <div class="text-right">
-                <h1 class="xl:text-[52px] md:text-3xl font-bebas">Breakneck</h1>
+                <h1 class="xl:text-[52px] md:text-3xl font-bebas py-2.5">Breakneck</h1>
                 <div class="flex items-center justify-end w-full space-x-5 my-2.5">
                   <button class="py-3 px-6 rounded-[30px] text-white text-base bg-[#D3041C]">
                     Join our Comunity
@@ -62,7 +66,7 @@
               </div>
             </div>
 
-            <div class="image_wrapper w-full md:ml-28 ml-16 mt-5">
+            <div class="image_wrapper w-full md:ml-60 ml-16 mt-5">
               <img src="@/assets/images/hero/hero.png" class="object-contain" />
             </div>
             <div class="mobile_text-wrapper -mt-20 text-center sm:hidden">
@@ -107,7 +111,7 @@
               >
                 <div
                   v-if="currentChapterIndex === index"
-                  class="grid md:grid-cols-2 place-items-center justify-items-center md:p-0 p-5"
+                  class="grid md:grid-cols-2 place-items-center justify-items-center md:p-0 p-5 overflow-hidden"
                 >
                   <div class="img_wrapper">
                     <img :src="currentChapter.image" alt="" />
@@ -141,8 +145,15 @@
         <div class="top-0 md:left-0 right-0 w-full">
           <div class="grid md:grid-cols-2">
             <div class=""></div>
-            <div>
+            <div class="relative">
               <img :src="currentCharacter.image" alt="character-image" />
+              <div
+                class="absolute z-20 top-[60%] left-[65%] transform -translate-x-1/2 -translate-y-1/2"
+              >
+                <button type="button" @click="changeCharacterWithLoop">
+                  <img src="@/assets/images/section-2/dubble-arrow.png" alt="" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -300,6 +311,10 @@ const currentChapter = computed(() => {
 const changeCharacter = (index) => {
   currentIndex.value = index
 }
+const changeCharacterWithLoop = () => {
+  currentIndex.value = (currentIndex.value + 1) % characters.value.length
+}
+
 const isTransitioning = ref(false)
 
 const isInChapterSection = () => {

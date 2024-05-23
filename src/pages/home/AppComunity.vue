@@ -1,8 +1,8 @@
 <template>
-  <div class="app-comunity relative pt-80">
+  <div class="app-comunity relative md:pt-96 pt-40">
     <div class="absolute top-0 left-0 z-20">
       <div class="md:flex items-start md:h-screen justify-center w-full">
-        <div class="text_wrapper lg:text-left text-center mt-40 lg:ml-40 lg:w-1/3 lg:p-0 p-5">
+        <div class="text_wrapper lg:text-left text-center mt-60 lg:ml-40 lg:w-1/3 lg:p-0 p-5">
           <h2 class="lg:text-[64px] md:text-4xl text-2xl text-white uppercase xl:leading-none">
             Join Our community
           </h2>
@@ -10,12 +10,12 @@
             Malesuada magna sem dis ac nunc suspendisse libero.
           </p>
           <button
-            class="py-3 px-6 rounded-[30px] my-2.5 md:w-1/3 w-full text-white text-base bg-[#D3041C]"
+            class="py-3 px-6 rounded-[30px] my-2.5 md:w-[193px] w-full text-white text-base bg-[#D3041C]"
           >
             Join
           </button>
         </div>
-        <div class="social_wrapper md:mt-80 md:w-1/2 md:p-0 p-5">
+        <div class="social_wrapper md:-ml-24 md:mt-96 md:w-1/2 md:p-0 p-5">
           <ul class="flex items-center md:justify-start justify-center space-x-5 mb-8">
             <li>
               <a href="#">
