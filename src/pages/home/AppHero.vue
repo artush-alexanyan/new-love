@@ -1,14 +1,10 @@
 <template>
   <div class="hero">
     <div class="relative h-screen">
-      <div
-        class="absolute inset-0 bg-[url('@/assets/images/hero/hero-bg.png')] bg-cover bg-center"
-      ></div>
-      <div class="absolute inset-0 bg-black bg-opacity-75"></div>
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-transparent via-black/25 to-black/25"
-      ></div>
-      <div class="relative z-10">
+      <img src="@/assets/images/hero/image1.png" alt="" />
+      <img src="@/assets/images/hero/image-2.png" alt="" />
+      <!-- NAVBAR -->
+      <div class="absolute top-0 left-0 w-full z-10">
         <div
           class="w-[87.5%] mx-auto flex items-center justify-between pt-8 pb-8 border-b border-b-gray-800"
         >
@@ -28,9 +24,10 @@
           </div>
         </div>
       </div>
+      <!-- HERO CONTENT -->
       <div class="absolute left-0 w-full top-0">
         <div class="grid grid-cols-2 place items-center justify-items-center h-screen">
-          <div class="hero-text ml-80 text-white">
+          <div class="hero-text xl:ml-80 text-white">
             <h1 class="xl:text-7xl md:text-5xl text-2xl uppercase text-white font-bebas">
               Love <span class="text-red-500">&</span>
             </h1>
@@ -51,7 +48,7 @@
             </div>
 
             <div class="text-right">
-              <h1 class="text-5xl font-bebas">Breakneck</h1>
+              <h1 class="xl:text-5xl md:text-3xl font-bebas">Breakneck</h1>
               <div class="flex items-center justify-end w-full space-x-5 my-2.5">
                 <button class="py-3 px-6 rounded-[30px] text-white text-base bg-[#D3041C]">
                   Join our Comunity
@@ -61,22 +58,14 @@
             </div>
           </div>
           <div class="image_wrapper w-full">
-            <img src="@/assets/images/hero/hero-1.png" class="object-contain h-screen ml-20" />
+            <img src="@/assets/images/hero/hero-1.png" class="object-contain ml-20 mt-10" />
           </div>
         </div>
       </div>
-      <div class="absolute left-0 bottom-0">
-        <img src="@/assets/images/hero/sparks-left.png" alt="" />
+      <!-- SPARKELS -->
+      <div class="absolute left-0 -bottom-96 border">
+        <img src="@/assets/images/hero/sparks.png" alt="" />
       </div>
-      <div class="absolute right-0 bottom-0 border-white">
-        <img src="@/assets/images/hero/sparks-right.png" class="h-96" alt="" />
-      </div>
-      <div class="absolute right-0 bottom-0">
-        <img src="@/assets/images/hero/flame.png" alt="" />
-      </div>
-      <!-- <div class="absolute right-0 -bottom-10">
-        <img src="@/assets/images/hero/download.svg" alt="" />
-      </div> -->
       <BaseSocial />
     </div>
   </div>

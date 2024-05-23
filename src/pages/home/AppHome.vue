@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home bg-gradient-to-b from-[#0D0E11] to-[#0F161F]">
     <!-- <AppHero /> -->
     <AppCharacters />
     <AppComunity />

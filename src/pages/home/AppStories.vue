@@ -3,7 +3,6 @@
     <div
       class="relative h-screen w-full bg-[url('@/assets/images/section-1/section-1-bg.png')] bg-cover bg-no-repeat"
     >
-      <div class="absolute inset-0 w-full left-0 bg-black bg-opacity-80 h-screen"></div>
       <div class="absolute top-0 left-0 w-full h-screen">
         <div class="grid grid-cols-2 place-items-center justify-items-center h-screen">
           <div class="img_wrapper">

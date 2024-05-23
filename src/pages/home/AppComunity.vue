@@ -1,5 +1,5 @@
 <template>
-  <div class="app-comunity relative pt-80 bg-black">
+  <div class="app-comunity relative pt-80">
     <div class="absolute top-0 left-0 z-20">
       <div class="md:flex items-start md:h-screen justify-center w-full">
         <div class="text_wrapper lg:text-left text-center mt-40 lg:ml-40 lg:w-1/3 lg:p-0 p-5">
@@ -51,12 +51,5 @@
     <div class="image_wrapper">
       <img src="@/assets/images/section-3/section-bg.png" alt="" />
     </div>
-    <!-- <div
-      class="h-screen w-full bg-[url('@/assets/images/section-3/section-bg.png')] bg-no-repeat bg-cover bg-black"
-    >
-      <div class="absolute right-0 bottom-0">
-        <img src="@/assets/images/section-3/sparks.png" alt="" />
-      </div>
-    </div> -->
   </div>
 </template>

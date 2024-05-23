@@ -1,21 +1,104 @@
 <template>
-  <div class="app-stories bg-black">
+  <div class="app-stories">
+    <div class="hero">
+      <div class="relative h-screen">
+        <img src="@/assets/images/hero/image1.png" alt="" />
+        <img src="@/assets/images/hero/image-2.png" alt="" />
+        <!-- NAVBAR -->
+        <div class="absolute top-0 left-0 w-full z-10 md:block hidden">
+          <div
+            class="w-[87.5%] mx-auto flex items-center justify-between pt-8 pb-8 border-b border-b-gray-800"
+          >
+            <div class="logo w-[115px] h-[38px] rounded-[8px] border bg-white"></div>
+            <div class="navbar">
+              <ul class="flex items-center w-full justify-between text-[#ABABAB]">
+                <li class="px-3.5"><RouterLink to="/">Main info</RouterLink></li>
+                <li class="px-3.5"><RouterLink to="/">About</RouterLink></li>
+                <li class="px-3.5"><RouterLink to="/">Main Characters</RouterLink></li>
+                <li class="px-3.5"><RouterLink to="/">Community</RouterLink></li>
+              </ul>
+            </div>
+            <div class="right-box">
+              <button
+                type="button"
+                class="py-3 px-6 rounded-[30px] text-white border border-white bg-transparent"
+              >
+                Join the Waitlist
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- HERO CONTENT -->
+        <div class="absolute left-0 w-full top-0 md:px-0 px-5">
+          <div class="grid md:grid-cols-2 place items-center justify-items-center h-screen">
+            <div class="hero-text md:ml-80 text-white md:order-first order-last md:block hidden">
+              <h1 class="xl:text-7xl md:text-5xl text-2xl uppercase text-white font-bebas">
+                Love <span class="text-red-500">&</span>
+              </h1>
+              <h1 class="xl:text-7xl md:text-5xl text-2xl uppercase text-white font-bebas">
+                ambitions
+              </h1>
+
+              <div class="text-right flex items-center justify-end my-2.5">
+                <div class="text border-r-2">
+                  <p class="px-4 text-sm text-[#ABABAB] whitespace-nowrap">
+                    Secrets and betrayals in the glittering
+                  </p>
+                  <p class="px-6 text-sm text-[#ABABAB] whitespace-nowrap">
+                    high stakes of Formula 1 racing.
+                  </p>
+                </div>
+                <h1 class="xl:text-5xl md:text-3xl uppercase font-bebas ml-4 -mr-8">AT</h1>
+              </div>
+
+              <div class="text-right">
+                <h1 class="xl:text-5xl md:text-3xl font-bebas">Breakneck</h1>
+                <div class="flex items-center justify-end w-full space-x-5 my-2.5">
+                  <button class="py-3 px-6 rounded-[30px] text-white text-base bg-[#D3041C]">
+                    Join our Comunity
+                  </button>
+                  <h1 class="xl:text-5xl md:text-3xl font-bebas">Speed</h1>
+                </div>
+              </div>
+            </div>
+
+            <div class="image_wrapper w-full">
+              <img src="@/assets/images/hero/hero.png" class="object-contain md:ml-24 ml-16" />
+            </div>
+            <div class="mobile_text-wrapper -mt-20 text-center sm:hidden">
+              <h1 class="text-2xl uppercase text-white font-bebas">
+                Love
+                <span class="text-red-500">&</span>
+                Ambitions
+              </h1>
+              <p class="text-sm text-[#ABABAB] mt-5">
+                Secrets and betrayals in the glittering at high stakes of Formula 1 racing.
+              </p>
+              <div class="border-t border-t-white mx-10 my-2.5">
+                <h2 class="text-xl font-bebas text-white pt-2.5">AT Breakneck Speed</h2>
+              </div>
+              <div class="mx-10">
+                <button class="py-3 px-6 rounded-[30px] w-full text-white text-base bg-[#D3041C]">
+                  Join our Comunity
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SPARKELS -->
+        <div class="absolute left-0 md:top-[40%] top-1/2">
+          <img src="@/assets/images/hero/sparks.png" alt="" />
+        </div>
+        <!-- <BaseSocial /> -->
+      </div>
+    </div>
     <div
-      class="relative w-full bg-[url('@/assets/images/section-1/section-1-bg.png')] bg-cover bg-center bg-no-repeat"
+      class="relative md:pt-60 w-full bg-[url('@/assets/images/section-2/2-3-back.png')] bg-cover bg-center bg-no-repeat"
     >
-      <div class="absolute inset-0 w-full left-0 bg-black bg-opacity-90"></div>
       <div class="relative h-screen">
         <div class="absolute top-0 left-0 w-full">
-          <div
-            id="chapter-section"
-            class="chapters"
-            v-for="(chapter, index) in chapters"
-            :key="chapter.id"
-          >
-            <Transition
-              name="custom-classes"
-              enter-active-class="animate__animated animate__slideInRight animate__fast"
-            >
+          <div id="chapter-section border-4" v-for="(chapter, index) in chapters" :key="chapter.id">
+            <Transition name="custom-classes">
               <div
                 v-if="currentChapterIndex === index"
                 class="grid md:grid-cols-2 place-items-center justify-items-center md:p-0 p-5"
@@ -106,22 +189,10 @@
         </div>
         <img
           class="absolute bottom-0 left-0 w-full"
-          src="@/assets/images/section-2/shade_svg.svg"
+          src="@/assets/images/hero/3rd_TransEffect.png"
           alt="character-image"
         />
       </div>
-
-      <!-- COMUNITY SECTION -->
-
-      <!-- <div class="app-comunity">
-        <div
-          class="relative h-screen bg-black w-full bg-[url('@/assets/images/section-3/section-3-bg.png')] bg-no-repeat bg-bottom"
-        >
-          <div class="absolute right-0 bottom-0">
-            <img src="@/assets/images/section-3/sparks.png" alt="" />
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
@@ -219,33 +290,22 @@ const currentChapter = computed(() => {
   return mappedChapters.value[currentChapterIndex.value]
 })
 const changeCharacter = (index) => {
-  console.log('index', index)
   currentIndex.value = index
-}
-const changeChapter = (index) => {
-  console.log('index', index)
-  currentChapterIndex.value = index
 }
 const handleScroll = (event) => {
   const deltaY = event.deltaY
   // console.log('deltaY', deltaY)
 
   if (isInChapterSection()) {
-    console.log('We are on the chapters section')
-    console.log('currentChapterIndex.value', currentChapterIndex.value)
-    // console.log(
-    //   currentChapterIndex.value < chapters.value.length - 1,
-    //   'currentChapterIndex.value < chapters.value.length - 1'
-    // )
     if (deltaY > 0 && currentChapterIndex.value < chapters.value.length - 1) {
-      event.preventDefault() // Moved inside the conditional
+      event.preventDefault()
       handleScrollBottom()
     } else if (deltaY < 0 && currentChapterIndex.value > 0) {
-      event.preventDefault() // Moved inside the conditional
+      event.preventDefault()
       handleScrollTop()
     }
   } else {
-    // Allow default scrolling outside chapter section
+    return
   }
 }
 
@@ -255,7 +315,6 @@ const handleScrollTop = () => {
       currentChapterIndex.value--
     }
   }, 800)
-  console.log('Current chapter index', currentChapterIndex.value)
 }
 
 const handleScrollBottom = () => {
@@ -264,11 +323,9 @@ const handleScrollBottom = () => {
       currentChapterIndex.value++
     }
   }, 800)
-  console.log('Current chapter index', currentChapterIndex.value)
 }
 const isInChapterSection = () => {
-  const chapterSection = document.getElementById('chapter-section') // Adjust the selector as needed
-  console.log('chapterSection', chapterSection)
+  const chapterSection = document.getElementsByClassName('chapter-section')
   const rect = chapterSection.getBoundingClientRect()
   const viewHeight = window.innerHeight || document.documentElement.clientHeight
   return !(rect.bottom < 0 || rect.top - viewHeight >= 0)

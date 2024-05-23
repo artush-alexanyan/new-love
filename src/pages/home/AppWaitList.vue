@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-screen bg-black py-10">
+  <div class="w-full h-screen">
     <div class="md:flex items-center justify-center md:p-0 p-5">
       <div class="image_wrapper md:w-1/2 w-full">
         <img src="@/assets/images/section-4/cup.png" alt="cup" />
@@ -18,7 +18,7 @@
             Fames habitant scelerisque euismod non amet tempor. Semper sit quisque quisque tristique
             habitant arcu. Velit id commodo proin semper quam vel nulla lorem. Eros volutpat.
           </p>
-          <div class="md:flex items-center w-full px-5 md:space-x-5 md:spac-y-0 space-y-2.5">
+          <div class="md:flex md:items-center md:w-full md:space-x-5 md:spac-y-0 space-y-2.5">
             <input
               placeholder="Your Email"
               type="text"
