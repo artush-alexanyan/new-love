@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-screen">
+  <div class="w-full h-screen" id="wait_list">
     <div class="md:flex items-center justify-center md:px-0 px-5 md:pt-0 pt-20">
       <div class="image_wrapper md:w-1/2 w-full">
         <img src="@/assets/images/section-4/cup.png" alt="cup" />

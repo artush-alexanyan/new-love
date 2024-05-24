@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden">
+  <div class="relative overflow-hidden" id="main_characters">
     <div class="top-0 md:left-0 right-0 w-full">
       <div class="grid md:grid-cols-2">
         <div class=""></div>

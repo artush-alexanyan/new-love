@@ -4,17 +4,24 @@
     <div
       class="w-[87.5%] mx-auto flex items-center justify-between pt-8 pb-8 border-b border-b-gray-800"
     >
-      <div class="logo w-[115px] h-[38px] rounded-[8px] border bg-white"></div>
+      <div class="logo">
+        <img src="@/assets/logo.svg" alt="logo" />
+      </div>
       <div class="navbar">
         <ul class="flex items-center w-full justify-between text-[#ABABAB]">
-          <li class="px-3.5"><RouterLink to="/">Main info</RouterLink></li>
-          <li class="px-3.5"><RouterLink to="/">About</RouterLink></li>
-          <li class="px-3.5"><RouterLink to="/">Main Characters</RouterLink></li>
-          <li class="px-3.5"><RouterLink to="/">Community</RouterLink></li>
+          <li
+            @click="goToSection(navItem)"
+            v-for="navItem in navbarItems"
+            :key="navItem.id"
+            class="px-3.5 hover:cursor-pointer"
+          >
+            {{ navItem.title }}
+          </li>
         </ul>
       </div>
       <div class="right-box">
         <button
+          @click="goToWaitlist"
           type="button"
           class="py-3 px-6 rounded-[30px] text-white border border-white bg-transparent"
         >
@@ -24,3 +31,23 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const navbarItems = ref([
+  { id: 0, title: 'Main info', destination: 'main_info' },
+  { id: 1, title: 'About', destination: 'about' },
+  { id: 2, title: 'Main Characters', destination: 'main_characters' },
+  { id: 3, title: 'Commounity', destination: 'community' }
+])
+
+const goToSection = (section) => {
+  const el = document.getElementById(section.destination)
+  el.scrollIntoView({ behavior: 'smooth' })
+}
+const goToWaitlist = () => {
+  const el = document.getElementById('wait_list')
+  el.scrollIntoView({ behavior: 'smooth' })
+}
+</script>

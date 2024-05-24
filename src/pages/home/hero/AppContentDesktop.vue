@@ -20,7 +20,11 @@
     <div class="text-right">
       <h1 class="xl:text-[52px] md:text-3xl font-vintage py-2.5 uppercase">Breakneck</h1>
       <div class="flex items-center justify-end w-full space-x-5 my-2.5">
-        <button class="py-3 px-6 rounded-[30px] text-white text-base bg-[#D3041C]">
+        <button
+          type="button"
+          @click="goToCommunitySection"
+          class="py-3 px-6 rounded-[30px] text-white text-base bg-[#D3041C] z-20"
+        >
           Join our Comunity
         </button>
         <h1 class="xl:text-[52px] md:text-3xl font-vintage uppercase">Speed</h1>
@@ -28,3 +32,10 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const goToCommunitySection = () => {
+  const el = document.getElementById('community')
+  el.scrollIntoView({ behavior: 'smooth' })
+}
+</script>

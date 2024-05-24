@@ -1,5 +1,5 @@
 <template>
-  <div class="app-comunity relative md:pt-96 pt-40">
+  <div class="app-comunity relative md:pt-96 pt-40" id="community">
     <div class="absolute top-0 left-0 z-20">
       <div class="md:flex items-start md:h-screen justify-center w-full">
         <div
