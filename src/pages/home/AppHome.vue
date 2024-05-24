@@ -1,7 +1,9 @@
 <template>
   <div class="home bg-gradient-to-b from-[#0D0E11] to-[#0F161F]">
-    <!-- <AppHero /> -->
-    <AppCharacters />
+    <div class="app-stories">
+      <AppHero />
+      <AppCharacters />
+    </div>
     <AppComunity />
     <AppWaitList />
     <AppFooter />
@@ -9,9 +11,9 @@
 </template>
 
 <script setup>
-import AppHero from './AppHero.vue'
-import AppCharacters from './AppCharacters.vue'
 import AppComunity from './AppComunity.vue'
 import AppWaitList from './AppWaitList.vue'
 import AppFooter from './AppFooter.vue'
+import AppHero from './hero/AppHero.vue'
+import AppCharacters from './characters/AppCharacters.vue'
 </script>

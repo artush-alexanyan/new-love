@@ -1,13 +1,13 @@
 <template>
   <div class="w-full h-screen">
-    <div class="md:flex items-center justify-center md:p-0 p-5">
+    <div class="md:flex items-center justify-center md:px-0 px-5 md:pt-0 pt-20">
       <div class="image_wrapper md:w-1/2 w-full">
         <img src="@/assets/images/section-4/cup.png" alt="cup" />
       </div>
       <div class="md:w-1/2 w-full">
         <div class="wishlist_wrapper md:w-5/6 w-full">
           <h2
-            class="lg:text-[64px] md:text-4xl text-2xl md:text-left text-center text-white uppercase font-bebas leading-none"
+            class="lg:text-[64px] md:text-4xl text-2xl md:text-left text-center text-white uppercase font-vintage leading-none"
           >
             Be <span class="text-[#D3041C]">First</span>
           </h2>
