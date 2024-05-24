@@ -4,6 +4,7 @@
       <img src="@/assets/images/hero/image1.png" alt="" />
       <img src="@/assets/images/hero/image-2.png" alt="" />
       <HeroNavbar />
+      <HeroNavbarMobile />
       <!-- HERO CONTENT -->
       <div class="absolute left-0 w-full top-0 md:px-0 px-5">
         <div class="grid md:grid-cols-2 place-items-center place-content-start overflow-hidden">
@@ -26,6 +27,7 @@
 <script setup>
 import BaseSocial from '@/base/BaseSocial.vue'
 import HeroNavbar from './HeroNavbar.vue'
+import HeroNavbarMobile from './HeroNavbarMobile.vue'
 import HeroContentMobile from './HeroContentMobile.vue'
 import AppContentDesktop from './AppContentDesktop.vue'
 </script>

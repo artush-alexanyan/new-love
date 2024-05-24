@@ -11,7 +11,7 @@
     <div class="border-t border-t-white mx-10 my-2.5">
       <h2 class="text-xl font-vintage text-white pt-2.5">AT Breakneck Speed</h2>
     </div>
-    <div class="mx-10">
+    <div class="mt-10">
       <button class="py-3 px-6 rounded-[30px] w-full text-white text-base bg-[#D3041C]">
         Join our Comunity
       </button>

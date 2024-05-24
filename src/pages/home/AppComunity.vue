@@ -10,11 +10,11 @@
           >
             Join Our community
           </h2>
-          <p class="mt-1.5 md:text-sm text-xs text-[#ABABABE5]">
+          <p class="my-5 md:text-sm text-xs text-[#ABABABE5]">
             Malesuada magna sem dis ac nunc suspendisse libero.
           </p>
           <button
-            class="py-3 px-6 rounded-[30px] my-2.5 md:w-[193px] w-full text-white text-base bg-[#D3041C]"
+            class="py-3 px-6 rounded-[30px] md:w-[193px] w-full text-white text-base bg-[#D3041C]"
           >
             Join
           </button>
