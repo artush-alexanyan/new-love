@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Outfit';
-  src: url('@/fonts/Outfit-Medium.ttf') format('truetype');
+  src: url('@/fonts/outfit.ttf') format('truetype');
 }
 
 body {
