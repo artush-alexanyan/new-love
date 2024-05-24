@@ -1,7 +1,7 @@
 <template>
   <div class="hero-text md:ml-80 -mt-20 text-white md:order-first order-last md:block hidden">
     <h1 class="xl:text-7xl md:text-5xl text-2xl uppercase text-white text-center font-vintage">
-      Love <span class="text-red-500">&</span>
+      Love <span class="text-red-500 text-5xl">&</span>
     </h1>
     <h1 class="xl:text-7xl md:text-5xl text-2xl uppercase text-white font-vintage">ambitions</h1>
 
